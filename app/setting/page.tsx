@@ -6,7 +6,7 @@ const SettingPage = async () => {
 
   return (
     <div className='w-full h-screen p-5 flex gap-10'>
-      <SideNav session={session} active='setting' />
+      <SideNav session={session} />
 
       <div className='px-10 w-full h-full py-5 bg-emon-dark rounded-2xl relative overflow-hidden'>
         <div className="border-b flex justify-between items-center border-emon-light pb-3">
