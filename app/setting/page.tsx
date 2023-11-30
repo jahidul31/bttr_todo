@@ -1,8 +1,9 @@
 import SideNav from '@/components/SideNav'
 import { getServerSession } from 'next-auth'
+import { authOptions } from '../api/auth/[...nextauth]/options'
 
 const SettingPage = async () => {
-  const session = await getServerSession()
+  const session = await getServerSession(authOptions)
 
   return (
     <div className='w-full h-screen p-5 flex gap-10'>

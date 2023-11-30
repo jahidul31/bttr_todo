@@ -2,9 +2,10 @@ import RightContent from '@/components/RightContent'
 import SideNav from '@/components/SideNav'
 import { getAllImportantTodo } from '@/lib/actions/todo.action'
 import { getServerSession } from 'next-auth'
+import { authOptions } from '../api/auth/[...nextauth]/options'
 
 const ImportantTask = async () => {
-  const session = await getServerSession()
+  const session = await getServerSession(authOptions)
   const allTodo = await getAllImportantTodo({ email: session?.user?.email })
 
   return (
