@@ -37,7 +37,7 @@ const MobileNav = ({ session }: { session: any }) => {
 
         <div className="space-y-4">
           {SideNavLink.map((link: any) => (
-            <div className={cn(path === link.path && "border-l-2 border-emon-accent", "flex items-center gap-3 pl-5 py-1")}>
+            <div className={cn(path === link.path && "border-l-2 border-emon-accent", "flex items-center gap-3 pl-5 py-1")} key={link.path}>
               {link.icon(path)}
               <Link href={link.link}>{link.title}</Link>
             </div>
