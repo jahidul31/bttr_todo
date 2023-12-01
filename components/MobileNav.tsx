@@ -27,7 +27,7 @@ const MobileNav = ({ session }: { session: any }) => {
           <AlignJustify />
         </Button>
       </SheetTrigger>
-      <SheetContent side={"left"} className="w-[50%] flex justify-between flex-col">
+      <SheetContent side={"left"} className="flex justify-between flex-col">
         <SheetHeader>
           <div className="flex flex-col gap-3 justify-center items-center">
             <Image src={session.user?.image || ""} alt="user" width={64} height={64} className="p-2 border border-emon-accent rounded-full" />
